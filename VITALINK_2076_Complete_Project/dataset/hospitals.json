@@ -1,0 +1,68 @@
+{
+  "dataset": "VITALINK 2076 Synthetic Hospital Readiness Dataset",
+  "version": "1.0.0",
+  "data_type": "synthetic_demo_data",
+  "real_operational_data": false,
+  "source": "Default hospital records embedded in the unchanged v30 frontend.",
+  "notes": [
+    "All capacity, bed, load, distance, ETA, acceptance and capability values are demo values, not live data.",
+    "Hospital A uses a real institution name, but the operational figures shown here are synthetic.",
+    "The frontend remains unchanged; this folder is a separately packaged dataset."
+  ],
+  "records": [
+    {
+      "id": "A",
+      "en": "King Abdullah University Hospital",
+      "ar": "مستشفى الملك المؤسس عبد الله الجامعي",
+      "map": "King Abdullah University Hospital, Jordan",
+      "distance": 8.4,
+      "eta": 9,
+      "beds": 19,
+      "total": 20,
+      "cap": 96,
+      "cases": 12,
+      "accept": true,
+      "types": [
+        "general",
+        "cardiac",
+        "trauma"
+      ],
+      "icu": true
+    },
+    {
+      "id": "B",
+      "en": "Irbid Emergency Hospital B",
+      "ar": "مستشفى إربد للطوارئ B",
+      "map": "Irbid, Jordan",
+      "distance": 5.7,
+      "eta": 8,
+      "beds": 4,
+      "total": 16,
+      "cap": 58,
+      "cases": 24,
+      "accept": true,
+      "types": [
+        "general",
+        "trauma"
+      ],
+      "icu": false
+    },
+    {
+      "id": "C",
+      "en": "Irbid General Hospital C",
+      "ar": "مستشفى إربد العام C",
+      "map": "Irbid, Jordan",
+      "distance": 6.3,
+      "eta": 10,
+      "beds": 7,
+      "total": 22,
+      "cap": 70,
+      "cases": 20,
+      "accept": true,
+      "types": [
+        "general"
+      ],
+      "icu": false
+    }
+  ]
+}

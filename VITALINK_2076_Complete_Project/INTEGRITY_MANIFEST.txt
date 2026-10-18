@@ -1,0 +1,15 @@
+VITALINK 2076 — Integrity Manifest
+==================================
+
+Original source filename:
+VITALINK_Irbid_MVP_v30_BackendAware.html
+
+SHA-256:
+e275d96aa5db727715f5a133a8cd0fea67edbfa08d316f4ca8c7b4dfab70d908
+
+Verified bundle copies:
+- public/index.html
+- frontend/VITALINK_Irbid_MVP_v30_BackendAware.html
+
+Both copies were verified byte-identical to the original source before packaging.
+No frontend source changes were applied during bundling.

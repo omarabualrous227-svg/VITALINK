@@ -1,0 +1,4 @@
+﻿id,en,ar,areaEn,areaAr,eta_if_location_resolved,busy_in_default_demo,notes
+Unit 03,Civil Defense Unit 03,وحدة الدفاع المدني 03,Irbid Center,مركز إربد,4,False,Busy state can be toggled by the Primary Ambulance Busy scenario.
+Unit 07,Civil Defense Unit 07,وحدة الدفاع المدني 07,Irbid South,جنوب إربد,7,False,Next available unit in the Primary Ambulance Busy scenario.
+Unit 11,Civil Defense Unit 11,وحدة الدفاع المدني 11,Irbid North,شمال إربد,,True,Default demo marks this unit busy; ETA unavailable.

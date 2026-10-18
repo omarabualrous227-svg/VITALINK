@@ -1,0 +1,43 @@
+{
+  "dataset": "VITALINK 2076 Synthetic Ambulance Unit Dataset",
+  "version": "1.0.0",
+  "data_type": "synthetic_demo_data",
+  "real_operational_data": false,
+  "source": "Dispatch unit definitions embedded in the unchanged v30 frontend.",
+  "notes": [
+    "ETAs are demo estimates only and conditional on resolved patient location.",
+    "These are not live Civil Defense unit locations or availability."
+  ],
+  "records": [
+    {
+      "id": "Unit 03",
+      "en": "Civil Defense Unit 03",
+      "ar": "وحدة الدفاع المدني 03",
+      "areaEn": "Irbid Center",
+      "areaAr": "مركز إربد",
+      "eta_if_location_resolved": 4,
+      "busy_in_default_demo": false,
+      "notes": "Busy state can be toggled by the Primary Ambulance Busy scenario."
+    },
+    {
+      "id": "Unit 07",
+      "en": "Civil Defense Unit 07",
+      "ar": "وحدة الدفاع المدني 07",
+      "areaEn": "Irbid South",
+      "areaAr": "جنوب إربد",
+      "eta_if_location_resolved": 7,
+      "busy_in_default_demo": false,
+      "notes": "Next available unit in the Primary Ambulance Busy scenario."
+    },
+    {
+      "id": "Unit 11",
+      "en": "Civil Defense Unit 11",
+      "ar": "وحدة الدفاع المدني 11",
+      "areaEn": "Irbid North",
+      "areaAr": "شمال إربد",
+      "eta_if_location_resolved": null,
+      "busy_in_default_demo": true,
+      "notes": "Default demo marks this unit busy; ETA unavailable."
+    }
+  ]
+}

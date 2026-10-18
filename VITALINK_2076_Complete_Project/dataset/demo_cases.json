@@ -1,0 +1,229 @@
+{
+  "dataset": "VITALINK 2076 Synthetic Demo Cases",
+  "version": "1.0.0",
+  "data_type": "synthetic_test_data",
+  "real_patient_data": false,
+  "clinical_protocol": false,
+  "source": "Scenario preload values embedded in the unchanged v30 frontend.",
+  "notes": [
+    "Names, ages, vitals, notes, statuses and scenario changes are synthetic test inputs.",
+    "Values are for software workflow demonstration only, not clinical guidance or patient-care decisions."
+  ],
+  "records": [
+    {
+      "scenario_id": "chest_standard",
+      "name_en": "Demo Patient",
+      "age": 58,
+      "location": "Irbid, Jordan",
+      "emergency": "chest",
+      "notes_en": "Chest pain with shortness of breath reported.",
+      "status": "RECEIVED_911",
+      "ambulance": "Unit 03",
+      "assigned": false,
+      "vitals": {
+        "bp": null,
+        "hr": null,
+        "spo2": null,
+        "temp": null,
+        "rr": null,
+        "con": "alert"
+      },
+      "hospital_overrides": {}
+    },
+    {
+      "scenario_id": "trauma_standard",
+      "name_en": "Trauma Demo Patient",
+      "age": 32,
+      "location": "Irbid, Jordan",
+      "emergency": "trauma",
+      "notes_en": "Road traffic injury with suspected lower-limb trauma.",
+      "status": "RECEIVED_911",
+      "ambulance": "Unit 03",
+      "assigned": false,
+      "vitals": {
+        "bp": null,
+        "hr": null,
+        "spo2": null,
+        "temp": null,
+        "rr": null,
+        "con": "alert"
+      },
+      "hospital_overrides": {}
+    },
+    {
+      "scenario_id": "unconscious_high",
+      "name_en": "Unconscious Demo Patient",
+      "age": 64,
+      "location": "Irbid, Jordan",
+      "emergency": "uncon",
+      "notes_en": "Patient found unresponsive. EMS assessment required.",
+      "status": "EMS_ASSIGNED",
+      "ambulance": "Unit 03",
+      "assigned": true,
+      "vitals": {
+        "bp": "82/54",
+        "hr": "136",
+        "spo2": "88",
+        "temp": "36.8",
+        "rr": "32",
+        "con": "unresponsive"
+      },
+      "hospital_overrides": {}
+    },
+    {
+      "scenario_id": "bleeding_high",
+      "name_en": "Bleeding Demo Patient",
+      "age": 41,
+      "location": "Irbid, Jordan",
+      "emergency": "bleed",
+      "notes_en": "Severe external bleeding after trauma.",
+      "status": "EMS_ASSIGNED",
+      "ambulance": "Unit 03",
+      "assigned": true,
+      "vitals": {
+        "bp": "86/58",
+        "hr": "142",
+        "spo2": "94",
+        "temp": "36.4",
+        "rr": "28",
+        "con": "voice"
+      },
+      "hospital_overrides": {}
+    },
+    {
+      "scenario_id": "no_beds",
+      "name_en": "Capacity Edge Patient",
+      "age": 55,
+      "location": "Irbid, Jordan",
+      "emergency": "chest",
+      "notes_en": "Edge-case test: no receiving beds are available.",
+      "status": "EMS_ASSIGNED",
+      "ambulance": "Unit 03",
+      "assigned": true,
+      "vitals": {
+        "bp": "118/76",
+        "hr": "96",
+        "spo2": "95",
+        "temp": "37",
+        "rr": "20",
+        "con": "alert"
+      },
+      "hospital_overrides": {
+        "all_hospitals_beds": 0,
+        "all_hospitals_accepting": false
+      }
+    },
+    {
+      "scenario_id": "hospital_declines",
+      "name_en": "Trauma Reroute Patient",
+      "age": 29,
+      "location": "Irbid, Jordan",
+      "emergency": "trauma",
+      "notes_en": "Trauma case already matched to Hospital A; receiving decision is pending.",
+      "status": "READINESS_REQUESTED",
+      "ambulance": "Unit 03",
+      "assigned": true,
+      "vitals": {
+        "bp": "104/68",
+        "hr": "112",
+        "spo2": "96",
+        "temp": "36.7",
+        "rr": "22",
+        "con": "alert"
+      },
+      "selected_hospital": "A",
+      "readiness_request": "A",
+      "hospital_overrides": {}
+    },
+    {
+      "scenario_id": "gps_denied",
+      "name_en": "",
+      "age": null,
+      "location": "Location permission not granted",
+      "emergency": "chest",
+      "notes_en": "",
+      "status": "DRAFT",
+      "ambulance": "Unit 03",
+      "assigned": false,
+      "vitals": {
+        "bp": null,
+        "hr": null,
+        "spo2": null,
+        "temp": null,
+        "rr": null,
+        "con": "alert"
+      },
+      "scenario_flags": {
+        "gpsDenied": true
+      },
+      "hospital_overrides": {}
+    },
+    {
+      "scenario_id": "unit_busy",
+      "name_en": "Dispatch Demo Patient",
+      "age": 47,
+      "location": "Irbid, Jordan",
+      "emergency": "breath",
+      "notes_en": "Breathing difficulty. Primary ambulance is simulated as busy.",
+      "status": "RECEIVED_911",
+      "ambulance": "Unit 03",
+      "assigned": false,
+      "vitals": {
+        "bp": null,
+        "hr": null,
+        "spo2": null,
+        "temp": null,
+        "rr": null,
+        "con": "alert"
+      },
+      "scenario_flags": {
+        "unit03Busy": true
+      },
+      "hospital_overrides": {}
+    },
+    {
+      "scenario_id": "stale_readiness",
+      "name_en": "Stale Data Demo Patient",
+      "age": 60,
+      "location": "Irbid, Jordan",
+      "emergency": "chest",
+      "notes_en": "Edge-case test: hospital readiness timestamps are stale.",
+      "status": "HOSPITAL_MATCHED",
+      "ambulance": "Unit 03",
+      "assigned": true,
+      "vitals": {
+        "bp": "116/74",
+        "hr": "92",
+        "spo2": "95",
+        "temp": "36.9",
+        "rr": "19",
+        "con": "alert"
+      },
+      "selected_hospital": "A",
+      "hospital_readiness_age_minutes": 15,
+      "hospital_overrides": {}
+    },
+    {
+      "scenario_id": "readiness_changes_enroute",
+      "name_en": "En-Route Demo Patient",
+      "age": 57,
+      "location": "Irbid, Jordan",
+      "emergency": "chest",
+      "notes_en": "Edge-case test: receiving readiness changes after transport starts.",
+      "status": "EN_ROUTE",
+      "ambulance": "Unit 03",
+      "assigned": true,
+      "vitals": {
+        "bp": "102/66",
+        "hr": "108",
+        "spo2": "91",
+        "temp": "36.8",
+        "rr": "24",
+        "con": "alert"
+      },
+      "selected_hospital": "A",
+      "hospital_confirmed": true,
+      "hospital_overrides": {}
+    }
+  ]
+}

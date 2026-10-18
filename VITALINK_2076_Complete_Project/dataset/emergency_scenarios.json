@@ -1,0 +1,129 @@
+{
+  "dataset": "VITALINK 2076 Scenario Lab Dataset",
+  "version": "1.0.0",
+  "data_type": "synthetic_test_scenarios",
+  "real_patient_data": false,
+  "source": "Scenario catalog and expected outcomes embedded in the unchanged v30 frontend.",
+  "records": [
+    {
+      "id": "chest_standard",
+      "group": "standard",
+      "title_en": "Chest Pain — Full Workflow",
+      "title_ar": "ألم صدر — المسار الكامل",
+      "start_en": "Patient → 911",
+      "start_ar": "المريض ← 911",
+      "objective_en": "Demonstrate the complete closed-loop workflow from emergency request to case closure.",
+      "objective_ar": "عرض المسار المغلق كاملًا من طلب الطوارئ حتى إغلاق الحالة.",
+      "expected_en": "Case progresses through EMS, hospital confirmation, transport, handoff and closure.",
+      "expected_ar": "تنتقل الحالة عبر الإسعاف وتأكيد المستشفى والنقل والتسليم والإغلاق."
+    },
+    {
+      "id": "trauma_standard",
+      "group": "standard",
+      "title_en": "Trauma — Alternative Capability",
+      "title_ar": "إصابة — قدرة بديلة",
+      "start_en": "Patient → 911",
+      "start_ar": "المريض ← 911",
+      "objective_en": "Show that destination matching changes when the emergency requires trauma-capable care.",
+      "objective_ar": "إظهار تغير مطابقة الوجهة عندما تتطلب الحالة قدرة على التعامل مع الإصابات.",
+      "expected_en": "A trauma-capable hospital ranks above general-only alternatives.",
+      "expected_ar": "يتقدم مستشفى قادر على الإصابات على البدائل العامة فقط."
+    },
+    {
+      "id": "unconscious_high",
+      "group": "standard",
+      "title_en": "Unconscious Patient — Higher Acuity",
+      "title_ar": "مريض فاقد الوعي — حدة أعلى",
+      "start_en": "EMS assessment",
+      "start_ar": "تقييم الإسعاف",
+      "objective_en": "Test whether field vitals influence the MVP support requirements and ranking.",
+      "objective_ar": "اختبار تأثير العلامات الحيوية الميدانية على متطلبات الدعم والترتيب.",
+      "expected_en": "Higher-acuity demo flags activate and ICU/capacity support influences the match.",
+      "expected_ar": "تظهر مؤشرات الحدة الأعلى وتؤثر العناية الحثيثة والسعة على المطابقة."
+    },
+    {
+      "id": "bleeding_high",
+      "group": "standard",
+      "title_en": "Severe Bleeding — Field Assessment",
+      "title_ar": "نزيف شديد — تقييم ميداني",
+      "start_en": "EMS assessment",
+      "start_ar": "تقييم الإسعاف",
+      "objective_en": "Exercise urgent trauma matching using preloaded abnormal field measurements.",
+      "objective_ar": "اختبار مطابقة الإصابات العاجلة باستخدام قياسات ميدانية غير طبيعية جاهزة.",
+      "expected_en": "The case is treated as higher-acuity and only suitable receiving options remain actionable.",
+      "expected_ar": "تعامل الحالة كمؤشر حدة أعلى وتبقى خيارات الاستقبال الملائمة فقط قابلة للإجراء."
+    },
+    {
+      "id": "no_beds",
+      "group": "edge",
+      "title_en": "No Beds Available",
+      "title_ar": "لا توجد أسرة متاحة",
+      "start_en": "EMS hospital analysis",
+      "start_ar": "تحليل المستشفى لدى الإسعاف",
+      "objective_en": "Verify the system does not falsely confirm a destination when every hospital is unavailable.",
+      "objective_ar": "التأكد من أن النظام لا يؤكد وجهة بشكل خاطئ عندما تكون جميع المستشفيات غير متاحة.",
+      "expected_en": "No suitable hospital is selected and manual EMS escalation is required.",
+      "expected_ar": "لا يتم اختيار مستشفى مناسب ويصبح التصعيد اليدوي للإسعاف مطلوبًا."
+    },
+    {
+      "id": "hospital_declines",
+      "group": "edge",
+      "title_en": "Hospital Declines Readiness",
+      "title_ar": "المستشفى يرفض الجاهزية",
+      "start_en": "Hospital decision",
+      "start_ar": "قرار المستشفى",
+      "objective_en": "Test automatic re-ranking after the receiving hospital declines the request.",
+      "objective_ar": "اختبار إعادة الترتيب تلقائيًا بعد رفض المستشفى المستقبل للطلب.",
+      "expected_en": "Hospital A is removed and the next suitable trauma destination is recalculated.",
+      "expected_ar": "يتم استبعاد المستشفى A وإعادة حساب الوجهة التالية المناسبة للإصابات."
+    },
+    {
+      "id": "gps_denied",
+      "group": "edge",
+      "title_en": "Location Permission Denied",
+      "title_ar": "رفض إذن الموقع",
+      "start_en": "Patient interface",
+      "start_ar": "واجهة المريض",
+      "objective_en": "Test the patient-side recovery path when browser geolocation is unavailable or denied.",
+      "objective_ar": "اختبار مسار الاسترداد لدى المريض عندما يكون تحديد الموقع غير متاح أو مرفوضًا.",
+      "expected_en": "The simulated denial is shown and the user can recover using the Irbid demo location.",
+      "expected_ar": "يظهر رفض الإذن المحاكى ويمكن للمستخدم الاسترداد باستخدام موقع إربد التجريبي."
+    },
+    {
+      "id": "unit_busy",
+      "group": "edge",
+      "title_en": "Primary Ambulance Busy",
+      "title_ar": "سيارة الإسعاف الأساسية مشغولة",
+      "start_en": "911 dispatch",
+      "start_ar": "توجيه 911",
+      "objective_en": "Verify dispatch chooses the next available ambulance when Unit 03 is unavailable.",
+      "objective_ar": "التأكد من اختيار سيارة الإسعاف المتاحة التالية عندما تكون الوحدة 03 غير متاحة.",
+      "expected_en": "Unit 07 becomes the recommended dispatch unit and the case continues normally.",
+      "expected_ar": "تصبح الوحدة 07 هي وحدة التوجيه الموصى بها وتتابع الحالة بشكل طبيعي."
+    },
+    {
+      "id": "stale_readiness",
+      "group": "edge",
+      "title_en": "Stale Hospital Readiness Data",
+      "title_ar": "بيانات جاهزية مستشفى قديمة",
+      "start_en": "EMS hospital analysis",
+      "start_ar": "تحليل المستشفى لدى الإسعاف",
+      "objective_en": "Verify that readiness older than 10 minutes cannot be used to request hospital confirmation.",
+      "objective_ar": "التأكد من عدم استخدام بيانات جاهزية أقدم من 10 دقائق لطلب تأكيد المستشفى.",
+      "expected_en": "Data confidence becomes low and the readiness request is blocked until refresh.",
+      "expected_ar": "تنخفض ثقة البيانات ويتم منع طلب الجاهزية حتى التحديث."
+    },
+    {
+      "id": "readiness_changes_enroute",
+      "group": "edge",
+      "title_en": "Readiness Changes During Transport",
+      "title_ar": "تغير الجاهزية أثناء النقل",
+      "start_en": "Ambulance en route",
+      "start_ar": "سيارة الإسعاف بالطريق",
+      "objective_en": "Verify that VITALINK does not silently reroute an ambulance after transport starts.",
+      "objective_ar": "التأكد من أن VITALINK لا يحول سيارة الإسعاف بصمت بعد بدء النقل.",
+      "expected_en": "A critical manual-review alert appears and the current route is preserved until a human decides.",
+      "expected_ar": "يظهر تنبيه حرج للمراجعة اليدوية ويبقى المسار الحالي محفوظًا حتى اتخاذ قرار بشري."
+    }
+  ]
+}

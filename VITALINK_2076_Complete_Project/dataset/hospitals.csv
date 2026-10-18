@@ -1,0 +1,4 @@
+﻿id,en,ar,map,distance,eta,beds,total,cap,cases,accept,types,icu
+A,King Abdullah University Hospital,مستشفى الملك المؤسس عبد الله الجامعي,"King Abdullah University Hospital, Jordan",8.4,9,19,20,96,12,True,general;cardiac;trauma,True
+B,Irbid Emergency Hospital B,مستشفى إربد للطوارئ B,"Irbid, Jordan",5.7,8,4,16,58,24,True,general;trauma,False
+C,Irbid General Hospital C,مستشفى إربد العام C,"Irbid, Jordan",6.3,10,7,22,70,20,True,general,False
